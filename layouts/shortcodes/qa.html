@@ -1,0 +1,352 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+	.accordion {
+		background-color: #2773a5;
+		color: #ffffff;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 16px;
+		transition: 0.4s;
+	}
+
+	.active,
+	.accordion:hover {
+		background-color: #1B4F72;
+	}
+
+	.accordion:after {
+		content: '\002B';
+		color: #777;
+		font-weight: bold;
+		float: right;
+		margin-left: 5px;
+	}
+
+	.active:after {
+		content: "\2212";
+	}
+
+	.panel {
+		padding: 0 18px;
+		background-color: white;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+
+	img.animated-gif {
+		width: 80px;
+		height: auto;
+	}
+</style>
+<title>Geographic Question Answering</title>
+<script>
+	function activate() {
+		document.getElementById("sample-questions").classList.toggle("show");
+	}
+
+	window.onclick = function(event) {
+		if (!event.target.matches('.dropdown-toggle')) {
+			var dropdowns = document.getElementsByClassName("dropdown-menu");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
+			}
+		}
+	}
+
+	function sample_input(val) {
+		document.getElementById("question-text").value = val
+	}
+
+	function analyze() {
+		question = document.getElementById("question-text").value
+		document.getElementById("question-info").innerHTML =
+			"<table style='max-width: 80%; background-color: #ffffff; border: 0px; border-spacing:0px'><tr style='height: 0;'><td style='background-color: #ffffff; border: 0px solid white;'><img class=\"animated-gif\" src=\"../images/loading.gif\"  align=\"left\" ></td><td style='background-color: #ffffff; border: 0px solid white;'>  Processing... </td></tr></table> "
+		var xhr = new XMLHttpRequest();
+		var url = "{{.Get `url`}}";
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader("Content-Type", "application/json");
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				var json = JSON.parse(xhr.responseText);
+				create_encoding_table(json.encoding)
+				fol_info = document.getElementById("fol-info")
+				fol_info.innerHTML = json.fol
+
+				query_info = document.getElementById("query-info");
+				res_proc = preprocess(json.query);
+				console.log(res_proc);
+				query_info.value = res_proc[0];
+				query_info.rows = res_proc[1] + 2;
+				query_info.style.display = 'block';
+
+				exquery_info = document.getElementById("exquery-info");
+				res_proc2 = preprocess(json.executable);
+				console.log(res_proc2);
+				exquery_info.value = res_proc2[0];
+				exquery_info.rows = res_proc2[1] + 2;
+				exquery_info.style.display = 'block';
+				document.getElementById("question-info").innerHTML =
+					"<table style='max-width: 80%; background-color: #ffffff; border: 0px; border-spacing:0px'><tr style='height: 0;'><td style='background-color: #ffffff; border: 0px solid white;'><img class=\"animated-gif\" src=\"../images/generated.gif\" align=\"left\" ></td><td style='background-color: #ffffff; border: 0px solid white;'> Query Generated </td></tr></table>";
+
+				execute_query(json.executable);
+			} else if (xhr.readyState == 4 && xhr.status == 400) {
+				document.getElementById("question-info").innerHTML =
+					"<table style='max-width: 80%; background-color: #ffffff; border: 0px; border-spacing:0px'><tr style='height: 0;'><td style='background-color: #ffffff; border: 0px solid white;'><img class=\"animated-gif\" src=\"../images/failed.gif\" align=\"left\" ></td><td style='background-color: #ffffff; border: 0px solid white;'> Sorry, the query generation was not successful </td></tr></table>";
+			};
+		};
+		var data = JSON.stringify({
+			"question": question,
+			"execute": "yes"
+		});
+		console.log(data);
+		xhr.send(data);
+	}
+
+	function execute_query(query) {
+		document.getElementById("question-info").innerHTML = "";
+		var xhr = new XMLHttpRequest();
+		var url = "{{.Get `url2`}}";
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader("Content-Type", "application/json");
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+			console.log(xhr.responseText)
+			var json = JSON.parse(xhr.responseText);
+			console.log(json);
+			create_result_table(json);
+		} else if (xhr.readyState == 4 && xhr.status == 400) {
+			document.getElementById("question-info").innerHTML =
+				"<table style='max-width: 80%; background-color: #ffffff; border: 0px; border-spacing:0px'><tr style='height: 0;'><td style='background-color: #ffffff; border: 0px solid white;'><img class=\"animated-gif\" src=\"../images/failed.gif\" align=\"left\" ></td><td style='background-color: #ffffff; border: 0px solid white;'> Sorry, the query generation was not successful </td></tr></table>";
+		};
+		}
+		var data = JSON.stringify({
+			"query": query
+		});
+		console.log(data);
+		xhr.send(data);
+	}
+
+	function occurrences(string, subString, allowOverlapping) {
+		string += "";
+		subString += "";
+		if (subString.length <= 0) return (string.length + 1);
+
+		var n = 0,
+			pos = 0,
+			step = allowOverlapping ? 1 : subString.length;
+
+		while (true) {
+			pos = string.indexOf(subString, pos);
+			if (pos >= 0) {
+				++n;
+				pos += step;
+			} else break;
+		}
+		return n;
+	}
+
+	function preprocess(val) {
+		var newline = String.fromCharCode(13, 10);
+		let count = occurrences(val, "\n")
+		val = val.replaceAll('\\n', newline);
+		val = val.replaceAll('\\t', '&emsp;')
+		return [val, count]
+	}
+
+	function create_result_table(json_object) {
+		if ("boolean" in json_object) {
+			var divContainer = document.getElementById("result-info");
+			if (json_object.boolean) {
+				divContainer.innerHTML = 'Yes';
+			} else {
+				divContainer.innerHTML = 'No'
+			}
+		} else {
+			var table = document.createElement("table");
+			table.setAttribute('class', 'styled-table')
+			var tr = table.insertRow(-1);
+			for (var i = 0; i < json_object.head.vars.length; i++) {
+				var th = document.createElement("th");
+				th.innerHTML = json_object.head.vars[i];
+				th.style = "background-color: #1B4F72; color: #ffffff;"
+				tr.appendChild(th);
+			}
+
+			for (var i = 0; i < json_object.results.bindings.length; i++) {
+				value = json_object.results.bindings[i];
+				tr = table.insertRow();
+				for (var j = 0; j < json_object.head.vars.length; j++) {
+					var cell = tr.insertCell();
+					cell.innerHTML = value[json_object.head.vars[j]].value;
+				}
+			}
+
+			var divContainer = document.getElementById("result-info");
+			divContainer.innerHTML = '';
+			divContainer.appendChild(table);
+		}
+		document.getElementById("question-info").innerHTML =
+			"<table style='max-width: 80%; background-color: #ffffff; border: 0px; border-spacing:0px'><tr style='height: 0;'><td style='background-color: #ffffff; border: 0px solid white;'><img class=\"animated-gif\" src=\"../images/executed1.gif\" align=\"left\" ></td><td  style='background-color: #ffffff; border: 0px solid white;'> Query Executed</td></tr></table>"
+	}
+
+	function create_encoding_table(object_val) {
+		var table = document.createElement("table");
+		table.setAttribute('class', 'styled-table')
+		var tr = table.insertRow(-1);
+		var th_name = document.createElement("th");
+		th_name.innerHTML = "name";
+		th_name.style = "background-color: #1B4F72; color: #ffffff;"
+		tr.appendChild(th_name);
+		var th_pos = document.createElement("th");
+		th_pos.innerHTML = "part-of-speech";
+		th_pos.style = "background-color: #1B4F72; color: #ffffff;"
+		tr.appendChild(th_pos);
+		var th_role = document.createElement("th");
+		th_role.innerHTML = "role";
+		th_role.style = "background-color: #1B4F72; color: #ffffff;"
+		tr.appendChild(th_role);
+
+		for (var key in object_val) {
+			value = object_val[key];
+			tr = table.insertRow()
+			var name_cell = tr.insertCell();
+			name_cell.innerHTML = key.split('--')[0];
+			var pos_cell = tr.insertCell();
+			pos_cell.innerHTML = value.pos;
+			var role_cell = tr.insertCell();
+			role_cell.innerHTML = value.role;
+		}
+
+		var divContainer = document.getElementById("encoding-info");
+		divContainer.innerHTML = '';
+
+		divContainer.appendChild(table);
+	}
+</script>
+
+<div class="post">
+	<div style="text-align: center">
+		<form class="">
+			<div role="group" class="input-group">
+				<div class="input-group-prepend">
+					<!---->
+					<div class="dropdown btn-group b-dropdown">
+						<!---->
+						<button type="button" class="btn dropdown-toggle btn-outline-secondary btn-sm" onclick="activate()" style="background-color: #1B4F72; color: #FFFFFF">
+							Choose an example...
+						</button>
+						<ul role="menu" tabindex="-1" class="dropdown-menu" id="sample-questions">
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">What is the name of closest pub to Trafalgar Square?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">Is there any hospital in a range of 1 km from Jubilee Gardens?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">Which hospitals in Liverpool are near Abercromby Square?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">What is the name of the river that flows under the Queensway Bridge in Liverpool?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">How many historic monument are within 500 m of Trafalgar Square?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">Is Liverpool part of Scotland?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">Which pubs in Liverpool are within five hundred meter of Anfield Stadium?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">What is the name of the river that flows through Liverpool?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">What is the most populated county in the Wales?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">How many rivers cross England's cities?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">What is the longest river that cross London?</a>
+							</li>
+							<li>
+								<a role="menuitem" onclick="sample_input(this.innerHTML);" href="#" class="dropdown-item">Which districts in England have population more than two hundred thousand?</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<input type="text" placeholder="or type a question..." class="form-control" id="question-text">
+				<div class="input-group-append">
+					<button type="button" onclick="analyze()" class="btn background hover btn-secondary" style="background-color: #1B4F72">
+						<span role="status" class="fas fa-search text-white">
+					</button>
+				</div>
+				<!---->
+			</div>
+		</form>
+	</div>
+</div>
+<div>
+	<div id='answer-info'><span id='question-info'></span></div>
+	<div id='query-info-set'>
+		<button class="accordion">Information extraction</button>
+		<div class="panel">
+			<div id="encoding-info">Here, information extraction results will be shown.</div>
+		</div>
+		<button class="accordion">Logical representation</button>
+		<div class="panel">
+			<div id="fol-info">Here, the logical representation of the question will be shown.</div>
+		</div>
+		<button class="accordion">Human-readable query</button>
+		<div class="panel">
+			<div id="query-info-div"> Human-readble GeoSPARQL query:
+				<textarea id="query-info" style="display:none; width:100%">
+
+			</textarea>
+			</div>
+		</div>
+		<button class="accordion">Exectuable query</button>
+
+		<div class="panel">
+			<div id="exquery-info-div"> Executable GeoSPARQL query:
+				<textarea id="exquery-info" style="display:none; width:100%">
+
+			</textarea>
+			</div>
+		</div>
+	</div>
+	<button class="accordion">Results</button>
+	<div class="panel">
+		Results:
+		<div id='result-info'></div>
+	</div>
+</div>
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			}
+		});
+	}
+</script>

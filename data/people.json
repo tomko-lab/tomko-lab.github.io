@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Dr",
+    "name": "Martin Tomko",
+    "position": "Senior Lecturer",
+    "email": "tomkom@unimelb.edu.au",
+    "page": "martin",
+    "order": 1
+  },
+  {
+    "title": "Dr",
+    "name": "Ivan Majic",
+    "position": "Research Assistant",
+    "email": "imajic@student.unimelb.edu.au",
+    "page": "ivan",
+    "order": 2
+  },
+  {
+    "title": "Mr",
+    "name": "Ehsan Hamzei",
+    "position": "PhD Student",
+    "email": "ehamzei@student.unimelb.edu.au",
+    "page": "ehsan",
+    "order": 2
+  },
+  {
+    "title": "Mr",
+    "name": "Rajesh Chittor Sundaram",
+    "position": "PhD Student",
+    "email": "rchittor@student.unimelb.edu.au",
+    "page": "rajesh",
+    "order": 2
+  },
+  {
+    "title": "Mr",
+    "name": "Subhrasankha Dey",
+    "position": "PhD Student",
+    "email": "deys@student.unimelb.edu.au",
+    "page": "subhrasankha",
+    "order": 2
+  },
+  {
+    "title": "Ms",
+    "name": "Kimia Amouzandeh",
+    "position": "PhD Student",
+    "email": "kamouzandeh@student.unimelb.edu.au",
+    "page": "kimia",
+    "order": 2
+  },
+  {
+    "title": "Mr",
+    "name": "Kamal Akbari",
+    "position": "PhD Student",
+    "email": "kakbari@student.unimelb.edu.au",
+    "page": "kamal",
+    "order": 2
+  },
+  {
+    "title": "Mr",
+    "name": "Hang Zhao",
+    "position": "PhD Student",
+    "email": "hang.zhao@student.unimelb.edu.au",
+    "page": "hang",
+    "order": 2
+  },
+  {
+    "title": "Ms",
+    "name": "Xiaonan Wang",
+    "position": "PhD Student",
+    "email": "xiaonan.wang4@student.unimelb.edu.au",
+    "page": "xiaonan",
+    "order": 2
+  },
+  {
+    "title": "Ms",
+    "name": "Youjin Choe",
+    "position": "PhD Student",
+    "email": "ychoe@student.unimelb.edu.au",
+    "page": "youjin",
+    "order": 2
+  },
+  {
+    "title": "Ms",
+    "name": "Kiersten Jowett",
+    "position": "PhD Student",
+    "email": "kjowett@student.unimelb.edu.au",
+    "page": "kiersten",
+    "order": 2
+  },
+  {
+    "title": "Mr",
+    "name": "Zexian Huang",
+    "position": "PhD Student",
+    "email": "zexianh@student.unimelb.edu.au",
+    "page": "zexian",
+    "order": 2
+  }
+]

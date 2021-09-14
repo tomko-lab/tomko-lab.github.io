@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Spatial Group</title>
+    <link>http://tomko.org/tags/</link>
+    <description>Recent content in Tags on Spatial Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 May 2021 16:33:43 +1000</lastBuildDate><atom:link href="http://tomko.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>shortcode</title>
+      <link>http://tomko.org/tags/shortcode/</link>
+      <pubDate>Sun, 16 May 2021 16:33:43 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/shortcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tweet</title>
+      <link>http://tomko.org/tags/tweet/</link>
+      <pubDate>Sun, 16 May 2021 16:33:43 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/tweet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youtube_video</title>
+      <link>http://tomko.org/tags/youtube_video/</link>
+      <pubDate>Sun, 16 May 2021 16:33:43 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/youtube_video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>publications</title>
+      <link>http://tomko.org/tags/publications/</link>
+      <pubDate>Sat, 06 Apr 2019 12:17:16 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>http://tomko.org/tags/research/</link>
+      <pubDate>Sat, 06 Apr 2019 12:17:16 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>update</title>
+      <link>http://tomko.org/tags/update/</link>
+      <pubDate>Sat, 06 Apr 2019 12:17:16 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>http://tomko.org/tags/automation/</link>
+      <pubDate>Tue, 13 Nov 2018 12:28:57 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>job</title>
+      <link>http://tomko.org/tags/job/</link>
+      <pubDate>Tue, 13 Nov 2018 12:28:57 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/job/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>http://tomko.org/tags/programming/</link>
+      <pubDate>Tue, 13 Nov 2018 12:28:57 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>robot</title>
+      <link>http://tomko.org/tags/robot/</link>
+      <pubDate>Tue, 13 Nov 2018 12:28:57 +1000</pubDate>
+      
+      <guid>http://tomko.org/tags/robot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>index</title>
+      <link>http://tomko.org/tags/index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tomko.org/tags/index/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

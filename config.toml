@@ -1,0 +1,111 @@
+baseURL = "http://tomko.org/"
+languageCode = "en-us"
+title = "Spatial Group"
+theme = "soho-modified"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+summarylength = 10
+enableEmoji = true
+paginate = 5
+
+
+[params]
+title = "Spatial Group"
+images = ["images/profile.png", "images/img_20190330_084958.jpg",
+"images/recruitment_a4_internal.png", 'images/people/ivanmajic.jpg']
+profilePicture = "images/profile.png"
+description = "Martin Tomko's group at the University of Melbourne"
+copyright = "Martin Tomko"
+license = "CC BY-SA 4.0"
+licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+builtWith = true
+mainSections = ["posts"]
+customCss = ["css/people.css", "css_bootstrap.min.css"]
+customJs = ["bibtex_js.js"]
+
+## Set custom theme color.
+themeColor = "#1B4F72"
+
+[[params.socialIcons]]
+icon = "fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/tomko/"
+
+[[params.socialIcons]]
+icon = "fa-github"
+title = "GitHub"
+url = "https://github.com/tomkom"
+
+[[params.socialIcons]]
+icon = "fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/dinomirMT"
+
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[menu]
+
+[[menu.main]]
+name = "Posts"
+weight = 100
+identifier = "posts"
+url = "/posts/"
+
+[[menu.main]]
+name = "Categories"
+weight = 200
+identifier = "categories"
+url = "/categories/"
+
+[[menu.main]]
+name = "Tags"
+weight = 200
+identifier = "tags"
+url = "/tags/"
+
+[[menu.main]]
+name = "About"
+identifier = "about"
+weight = 10
+url = "/about/"
+
+[[menu.main]]
+name = "Contact"
+identifier = "contact"
+weight = 20
+url = "/contact/"
+
+[[menu.main]]
+name = "People"
+identifier = "people"
+weight = 15
+url = "/people/"
+
+[[menu.main]]
+name = "Publications"
+identifier = "publications"
+weight = 18
+url = "/publications/"
+
+[[menu.main]]
+name = "Demo"
+identifier = "Demo"
+weight = 16
+url = "/demo/"
+
+[markup]
+
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+hl_Lines = ""
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+style = "monokai"
+tabWidth = 4
