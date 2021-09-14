@@ -6,7 +6,7 @@ tag: ["people", "group"]
 ---
 
 ## Bio
-Ehsan joined our group at 2017, and he ...
+I've got my PhD degree from the University of Melbourne. Recently, I started a research fellow position at the University of Melbourne on Pedestrian Mobility.
 
 ![profile](/images/people/ehsan.jpg)
 
@@ -15,4 +15,4 @@ Ehsan joined our group at 2017, and he ...
 
 
 ## Contact
-...
+Email: ehsan.hamzei@unimelb.edu.au
