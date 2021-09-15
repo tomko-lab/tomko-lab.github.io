@@ -6,7 +6,7 @@ tag: ["people", "group"]
 ---
 
 ## Bio
-Martin ...
+I am a Spatial Information Scientist and geographic information systems expert. I specialise in computational approaches to spatial communication problems (communication in and about our spatial environment), in particular with a focus on man-made environments, such as cities. I am currently Lecturer at the Department of Infrastructure Engineering and part of its Geomatics Discipline team at The University of Melbourne, Australia. 
 
 ![profile](/images/profile.png)
 
