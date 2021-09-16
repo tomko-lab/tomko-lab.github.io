@@ -8,14 +8,6 @@
     "order": 1
   },
   {
-    "title": "Dr",
-    "name": "Ivan Majic",
-    "position": "Alumni - PhD Student, RA",
-    "email": "",
-    "page": "ivan",
-    "order": 5
-  },
-  {
     "title": "Mr",
     "name": "Ehsan Hamzei",
     "position": "Research Fellow",
@@ -94,5 +86,13 @@
     "email": "zexianh@student.unimelb.edu.au",
     "page": "zexian",
     "order": 3
+  }, 
+  {
+    "title": "Dr",
+    "name": "Ivan Majic",
+    "position": "Alumni - PhD Student, RA",
+    "email": "",
+    "page": "ivan",
+    "order": 5
   }
 ]
