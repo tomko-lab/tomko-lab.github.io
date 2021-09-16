@@ -10,10 +10,10 @@
   {
     "title": "Dr",
     "name": "Ivan Majic",
-    "position": "Research Assistant",
-    "email": "imajic@student.unimelb.edu.au",
+    "position": "Alumni - PhD Student, RA",
+    "email": "",
     "page": "ivan",
-    "order": 2
+    "order": 5
   },
   {
     "title": "Mr",
@@ -29,7 +29,7 @@
     "position": "PhD Student",
     "email": "rchittor@student.unimelb.edu.au",
     "page": "rajesh",
-    "order": 2
+    "order": 3
   },
   {
     "title": "Mr",
@@ -37,7 +37,7 @@
     "position": "PhD Student",
     "email": "deys@student.unimelb.edu.au",
     "page": "subhrasankha",
-    "order": 2
+    "order": 4
   },
   {
     "title": "Ms",
@@ -45,7 +45,7 @@
     "position": "PhD Student",
     "email": "kamouzandeh@student.unimelb.edu.au",
     "page": "kimia",
-    "order": 2
+    "order": 4
   },
   {
     "title": "Mr",
@@ -53,7 +53,7 @@
     "position": "PhD Student",
     "email": "kakbari@student.unimelb.edu.au",
     "page": "kamal",
-    "order": 2
+    "order": 3
   },
   {
     "title": "Mr",
@@ -61,7 +61,7 @@
     "position": "PhD Student",
     "email": "hang.zhao@student.unimelb.edu.au",
     "page": "hang",
-    "order": 2
+    "order": 4
   },
   {
     "title": "Ms",
@@ -69,7 +69,7 @@
     "position": "PhD Student",
     "email": "xiaonan.wang4@student.unimelb.edu.au",
     "page": "xiaonan",
-    "order": 2
+    "order": 4
   },
   {
     "title": "Ms",
@@ -77,7 +77,7 @@
     "position": "PhD Student",
     "email": "ychoe@student.unimelb.edu.au",
     "page": "youjin",
-    "order": 2
+    "order": 4
   },
   {
     "title": "Ms",
@@ -85,7 +85,7 @@
     "position": "PhD Student",
     "email": "kjowett@student.unimelb.edu.au",
     "page": "kiersten",
-    "order": 2
+    "order": 3
   },
   {
     "title": "Mr",
@@ -93,6 +93,6 @@
     "position": "PhD Student",
     "email": "zexianh@student.unimelb.edu.au",
     "page": "zexian",
-    "order": 2
+    "order": 3
   }
 ]
