@@ -28,12 +28,19 @@ The up-to-date list of my publications is on [Google Scholar](https://scholar.go
 
 ## Contact
 
-Dr. Martin Tomko
+*Dr. Martin Tomko*
+
 Senior Lecturer
+
 Department of Infrastructure Engineering
+
 Melbourne Connect – Office 6313
+
 Faculty of Engineering and Information Technology 
+
 The University of Melbourne, Victoria 3010 Australia
+
 Mail: martin - AT - tomko.org
+
 Twitter: @dinomirMT
 
