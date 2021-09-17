@@ -3,11 +3,15 @@ title = "Contact"
 date = "2020-02-01"
 +++
 
-**Martin Tomko, PhD.**
+_Dr. Martin Tomko_  
+*Senior Lecturer*  
+Department of Infrastructure Engineering  
+Melbourne Connect – Office 6313 (when not at home)  
+Faculty of Engineering and Information Technology  
+The University of Melbourne  
+Victoria 3010  
+Australia
 
-Senior Lecturer in Spatial Information
+_Mail:_ martin - AT - tomko.org  
+_Twitter:_ @dinomirMT
 
-Department of Infrastructure Engineering
-The University of Melbourne
-3010 VIC, Australia
-E:  martin -AT- tomko [DOT] org

@@ -92,6 +92,12 @@ weight = 18
 url = "/publications/"
 
 [[menu.main]]
+name = "Projects"
+identifier = "projects"
+weight = 19
+url = "/projects/"
+
+[[menu.main]]
 name = "Demo"
 identifier = "Demo"
 weight = 16
