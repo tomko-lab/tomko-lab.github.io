@@ -1,5 +1,5 @@
 ---
-title: "Quick summary of Semester 1, 2019 (apologies for slow updates)"
+title: "Re-launch of the site"
 date: 2021-09-16T12:17:16+10:00
 draft: false
 tags: ["update","research", "publications"]
