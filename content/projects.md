@@ -7,8 +7,6 @@ tags: ["projects", "research"]
 categories: ["projects"]
 ---
 
-# Projects
-
 This is a brief list and summary of the projects undertaken in our group. If you are interested in any of the themes, please get in touch. We are always looking for new and exciting research challenges in computational spatial information science. Whether you are form industry, government, other universities or a student looking for a PhD, please get in touch.
 
 We will progressively add separate sites for each of these projects, summarizing the research outputs.
