@@ -1,5 +1,5 @@
 +++
 title = "Home"
-draft: false
+draft = false
 author = "Martin Tomko"
 +++
