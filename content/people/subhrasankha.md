@@ -7,7 +7,7 @@ tag: ["people", "group"]
 
 
 ## Bio
-Subhra joined our group in 2018, and he explore the means to estimate urban traffic flows from small subsets of the overall traffic -- based on trajectory data typically collected by Satellite Navigation companies. Subhra is supervised by Prof Stephan Winter, and co-supervised by Martin.
+Subhra joined our group in 2018, and he explores the means to estimate urban traffic flows from small subsets of the overall traffic -- based on trajectory data typically collected by Satellite Navigation companies. Subhra is supervised by Prof Stephan Winter, and co-supervised by Martin.
 
 ![profile](/images/people/subhrasankha.jpg)
 
