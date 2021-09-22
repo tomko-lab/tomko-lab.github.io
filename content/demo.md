@@ -1,6 +1,6 @@
 +++
 title = "Question Answering Demo"
-description = "About: Martin Tomko"
+description = "Demo of our Geo Question Answering System"
 date = "2019-02-28"
 aliases = ["demo"]
 author = "Martin Tomko"

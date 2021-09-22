@@ -2,7 +2,7 @@
 title: "Projects"
 date: 2021-09-17T10:48:44+10:00
 draft: false
-author: "Marting Tomko"
+author: "Martin Tomko"
 tags: ["projects", "research"]
 categories: ["projects"]
 ---
