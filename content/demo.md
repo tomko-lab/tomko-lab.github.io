@@ -6,4 +6,4 @@ aliases = ["demo"]
 author = "Ehsan Hamzei"
 +++
 
-{{< qa url="http://45.113.235.161:1313/question" url2="http://45.113.235.161:3031/queryJSON">}}
+{{< qa url="https://45.113.235.161:1313/question" url2="https://45.113.235.161:3031/queryJSON">}}
