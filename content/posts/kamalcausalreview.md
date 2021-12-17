@@ -15,9 +15,7 @@ We establish that this are is, indeed, only nascent, and that standard approache
 
 We review how fundamental properties of spatial phenomena (spatial dependency, spatial heterogeneity, and spatial effects) are addressed in geographical literature, with the aim to find common methodological threads.
 
-This need is impacting ecological research too, where a review with a similar focus has been recently published
-
-Yet, we find out that the methodological aparatus is still very nascent, and deserves a systeamtic treatment. We have some work cut out for us!
+Yet, we find out that the methodological aparatus is still very nascent, and deserves a systeamtic treatment. This need is impacting ecological research too (no surprise, a lot of the phenomena there are spatial). A review with a similar focus has been recently (concurrently) published by [Reich et al.](https://onlinelibrary.wiley.com/doi/full/10.1111/insr.12452) -- read it, it is excellent. We have some work cut out for us!
 
 Reference ( a preprint will be published here soon too):
 
