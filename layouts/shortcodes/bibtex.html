@@ -70,6 +70,18 @@ tbody.collapse.in {
   }
 </script>
 
+<script>
+  window.onload = function() {
+    classes = document.getElementsByClassName("downloadlink");
+    console.log(classes.length)
+    for (i=0; i<classes.length; i++) {
+      divclass = classes[i]
+      span = $(divclass.getElementsByClassName("link")[0])
+      console.log(span.text())
+    }
+  }
+</script>
+
 <bibtex src="{{.Get `file`}}"></bibtex>
 
 <div class="bibtex_structure">
@@ -100,7 +112,14 @@ tbody.collapse.in {
         <span class="if month"><span class="month" style="font-size:18px"></span>,</span>
         <span class="if year"> (<span class="year" style="font-size:18px"></span>).</span>
         <span class="if note"><span class="note" style="font-size:18px"></span>.</span>
-        <span class="if doi">DOI: <span class="doi" style="font-size:18px"/></span>
+        <span class="if doi">DOI: <span class="doi" style="font-size:18px"></span></span>
+        <span class="if link">
+        <a class="bibtexVar" href="../papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY" style="font-size:18px">
+            download
+        </a>
+      </div>
+          
+        </span>
         <!-- <a class="bibtexVar" role="button" data-toggle="collapse" href="javascript:void(0)" aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY"
         onclick="javascript:showBib(bib+BIBTEXKEY+)">
 		        [bib]
