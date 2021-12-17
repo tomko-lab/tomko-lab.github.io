@@ -7,7 +7,7 @@ tags: []
 categories: []
 ---
 
-We are very proud of Kamal's achievement, publishing his first first-authored paper in Gepographical Analysis!
+We are very proud of Kamal's achievement, publishing his first first-authored paper in Geographical Analysis!
 
 The paper [*Spatial Causality: A Systematic Review on Spatial Causal Inference*](https://doi.org/10.1111/gean.12312) reviews the state-of-the-art of Causal inference in spatial domains.
 
