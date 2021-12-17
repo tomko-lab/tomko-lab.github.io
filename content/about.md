@@ -10,5 +10,5 @@ We are a Spatial Information Science/Spatial Data Science research group at the 
 
 If you are interested in joining our group and tackling exciting spatial problems, read this Website (and in particular, Martin's research interests section), think how you could contribute, and get in touch.
 
-We conduct our research on a number of unceded lands -- primarily on Country of Wurundjeri people of the Kulin Nation, at a place currently called Melbourne. We pay our respects to the Elders past and present.
+We conduct our research on a number of unceded lands -- primarily on Country of Wurundjeri people of the Kulin Nation, at Naarm, a place currently called Melbourne. We pay our respects to their Elders past and present.
 
