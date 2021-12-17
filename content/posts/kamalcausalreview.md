@@ -11,7 +11,7 @@ We are very proud of Kamal's achievement, publishing his first first-authored pa
 
 The paper [*Spatial Causality: A Systematic Review on Spatial Causal Inference*](https://doi.org/10.1111/gean.12312) reviews the state-of-the-art of Causal inference in spatial domains.
 
-We establish that this are is, indeed, only nascent, and that standard approaches to Causal inference are severely challenged when it comes to spatial analysis. Spatial phenomena violate many ( actually, almost all) fundamental assumptions of causal inference, by acting at distance and by violating the Stable Unit Treatment Value Assumption. 
+We establish that research in this direction is, indeed, only nascent. Standard approaches to Causal inference are severely challenged when it comes to spatial analysis. Spatial phenomena violate many ( actually, almost all) fundamental assumptions of causal inference, by acting at distance and by violating the Stable Unit Treatment Value Assumption. 
 
 We review how fundamental properties of spatial phenomena (spatial dependency, spatial heterogeneity, and spatial effects) are addressed in geographical literature, with the aim to find common methodological threads.
 
