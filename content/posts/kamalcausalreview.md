@@ -22,3 +22,5 @@ Yet, we find out that the methodological aparatus is still very nascent, and des
 Reference ( a preprint will be published here soon too):
 
 Akbari, K., Winter, S., & Tomko, M. (online first 2021). Spatial Causality: A Systematic Review on Spatial Causal Inference. Geographical Analysis. doi:10.1111/gean.12312 
+
+![Causal Spatial Inference - a Review](/images/post_images/akbari2021review.png)
