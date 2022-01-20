@@ -116,7 +116,6 @@
 	}
 
 	function execute_query(query) {
-		document.getElementById("question-info").innerHTML = "";
 		var xhr = new XMLHttpRequest();
 		var url = "{{.Get `url2`}}";
 		xhr.open("POST", url, true);
