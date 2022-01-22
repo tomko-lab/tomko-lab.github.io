@@ -38,7 +38,7 @@
 		padding: 0 18px;
 		background-color: white;
 		max-height: 0;
-		overflow: hidden;
+		overflow: auto;
 		transition: max-height 0.2s ease-out;
 	}
 
@@ -71,6 +71,11 @@
 	}
 
 	function analyze() {
+		if (document.getElementById("ieacc").getAttribute("activated") == "y") {document.getElementById("ieacc").click()}
+		if (document.getElementById("logacc").getAttribute("activated") == "y") {document.getElementById("logacc").click()}
+		if (document.getElementById("hqueryacc").getAttribute("activated") == "y") {document.getElementById("hqueryacc").click()}
+		if (document.getElementById("equeryacc").getAttribute("activated") == "y") {document.getElementById("equeryacc").click()}
+		if (document.getElementById("resultacc").getAttribute("activated") == "y") {document.getElementById("resultacc").click()}
 		question = document.getElementById("question-text").value
 		document.getElementById("question-info").innerHTML =
 			"<table style='max-width: 80%; background-color: #ffffff; border: 0px; border-spacing:0px'><tr style='height: 0;'><td style='background-color: #ffffff; border: 0px solid white;'><img class=\"animated-gif\" src=\"../images/loading.gif\"  align=\"left\" ></td><td style='background-color: #ffffff; border: 0px solid white;'>  Processing... </td></tr></table> "
@@ -102,7 +107,15 @@
 				exquery_info.style.display = 'block';
 				document.getElementById("question-info").innerHTML =
 					"<table style='max-width: 80%; background-color: #ffffff; border: 0px; border-spacing:0px'><tr style='height: 0;'><td style='background-color: #ffffff; border: 0px solid white;'><img class=\"animated-gif\" src=\"../images/generated.gif\" align=\"left\" ></td><td style='background-color: #ffffff; border: 0px solid white;'> Query Generated </td></tr></table>";
-
+				
+				if (document.getElementById("ieacc").getAttribute("activated") == "y") {document.getElementById("ieacc").click()}
+				if (document.getElementById("logacc").getAttribute("activated") == "y") {document.getElementById("logacc").click()}
+				if (document.getElementById("hqueryacc").getAttribute("activated") == "y") {document.getElementById("hqueryacc").click()}
+				if (document.getElementById("equeryacc").getAttribute("activated") == "y") {document.getElementById("equeryacc").click()}
+				document.getElementById("ieacc").click()
+				document.getElementById("logacc").click()
+				document.getElementById("hqueryacc").click()
+				document.getElementById("equeryacc").click()
 				execute_query(json.executable);
 			} else if (xhr.readyState == 4 && xhr.status != 200) {
 				document.getElementById("question-info").innerHTML =
@@ -130,6 +143,8 @@
 			var json = JSON.parse(xhr.responseText);
 			console.log(json);
 			create_result_table(json);
+			if (document.getElementById("resultacc").getAttribute("activated") == "y") {document.getElementById("resultacc").click()}
+			document.getElementById("resultacc").click()
 		} else if (xhr.readyState == 4 && xhr.status != 200) {
 			document.getElementById("question-info").innerHTML =
 				"<table style='max-width: 80%; background-color: #ffffff; border: 0px; border-spacing:0px'><tr style='height: 0;'><td style='background-color: #ffffff; border: 0px solid white;'><img class=\"animated-gif\" src=\"../images/failed.gif\" align=\"left\" ></td><td style='background-color: #ffffff; border: 0px solid white;'> Sorry, the query generation was not successful </td></tr></table>";
@@ -305,15 +320,15 @@
 <div>
 	<div id='answer-info'><span id='question-info'></span></div>
 	<div id='query-info-set'>
-		<button class="accordion">Information extraction</button>
+		<button id="ieacc" class="accordion" activated="n">Information extraction</button>
 		<div class="panel">
 			<div id="encoding-info">Here, information extraction results will be shown.</div>
 		</div>
-		<button class="accordion">Logical representation</button>
+		<button id="logacc" class="accordion" activated="n">Logical representation</button>
 		<div class="panel">
 			<div id="fol-info">Here, the logical representation of the question will be shown.</div>
 		</div>
-		<button class="accordion">Human-readable query</button>
+		<button id="hqueryacc" class="accordion" activated="n">Human-readable query</button>
 		<div class="panel">
 			<div id="query-info-div"> Human-readble GeoSPARQL query:
 				<textarea id="query-info" style="display:none; width:100%">
@@ -321,7 +336,7 @@
 			</textarea>
 			</div>
 		</div>
-		<button class="accordion">Exectuable query</button>
+		<button id="equeryacc" class="accordion" activated="n">Exectuable query</button>
 
 		<div class="panel">
 			<div id="exquery-info-div"> Executable GeoSPARQL query:
@@ -331,7 +346,7 @@
 			</div>
 		</div>
 	</div>
-	<button class="accordion">Results</button>
+	<button id="resultacc" class="accordion" activated="n">Results</button>
 	<div class="panel">
 		Results:
 		<div id='result-info'></div>
@@ -345,6 +360,8 @@
 	for (i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function() {
 			this.classList.toggle("active");
+			if (this.getAttribute("activated") == "n") {this.setAttribute("activated", "y")}
+			else {this.setAttribute("activated", "n")}
 			var panel = this.nextElementSibling;
 			if (panel.style.maxHeight) {
 				panel.style.maxHeight = null;
