@@ -16,6 +16,14 @@
     "order": 2
   },
   {
+    "title": "Dr",
+    "name": "Brian Armstrong",
+    "position": "Research Fellow",
+    "email": "brian.armstrong@unimelb.edu.au",
+    "page": "brian",
+    "order": 2
+  },
+  {
     "title": "Mr",
     "name": "Rajesh Chittor Sundaram",
     "position": "PhD Student",
@@ -53,14 +61,6 @@
     "position": "PhD Student",
     "email": "hang.zhao@student.unimelb.edu.au",
     "page": "hang",
-    "order": 4
-  },
-  {
-    "title": "Ms",
-    "name": "Xiaonan Wang",
-    "position": "PhD Student",
-    "email": "xiaonan.wang4@student.unimelb.edu.au",
-    "page": "xiaonan",
     "order": 4
   },
   {
