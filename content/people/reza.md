@@ -13,7 +13,7 @@ His goal is to research on the validation of route instructions in executable te
 
 He specializes in spatial data science, natural language processing (NLP), executable text environments, and reinforcement learning.
 
-During his tenure in the Geomatics business, Reza has expertise in Spatial Databases and Spatial Programming, and experience in teaching, building surveying, and land surveying. He currently lives in Melbourne, and when he is not working, you can find him cooking or sport.
+During his tenure in the geomatics industry, Reza has acquired expertise in spatial databases and spatial programming, and deepened experience in teaching, building surveying, and land surveying. When he is not working, you can find him cooking or playing sport.
 
 ![profile](/images/people/reza.jpg)
 
