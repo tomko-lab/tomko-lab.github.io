@@ -25,11 +25,19 @@
   },
   {
     "title": "Mr",
+    "name": "Kamal Akbari",
+    "position": "PhD Student",
+    "email": "kakbari@student.unimelb.edu.au",
+    "page": "kamal",
+    "order": 3
+  },
+  {
+    "title": "Mr",
     "name": "Rajesh Chittor Sundaram",
     "position": "PhD Student",
     "email": "rchittor@student.unimelb.edu.au",
     "page": "rajesh",
-    "order": 3
+    "order": 4
   },
   {
     "title": "Mr",
@@ -46,14 +54,6 @@
     "email": "kamouzandeh@student.unimelb.edu.au",
     "page": "kimia",
     "order": 4
-  },
-  {
-    "title": "Mr",
-    "name": "Kamal Akbari",
-    "position": "PhD Student",
-    "email": "kakbari@student.unimelb.edu.au",
-    "page": "kamal",
-    "order": 3
   },
   {
     "title": "Mr",
@@ -101,6 +101,14 @@
     "position": "Alumni - PhD Student, RA",
     "email": "",
     "page": "ivan",
+    "order": 6
+  }, 
+  {
+    "title": "-",
+    "name": "Alumni",
+    "position": "Alumni of the group",
+    "email": "-",
+    "page": "-",
     "order": 5
   }
 ]
