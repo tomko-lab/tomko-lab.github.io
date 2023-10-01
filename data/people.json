@@ -32,6 +32,30 @@
     "order": 3
   },
   {
+    "title": "Ms",
+    "name": "Kiersten Jowett",
+    "position": "PhD Student",
+    "email": "kjowett@student.unimelb.edu.au",
+    "page": "kiersten",
+    "order": 3
+  },
+{
+    "title": "Mr",
+    "name": "Reza Arabsheibani",
+    "position": "PhD Student",
+    "email": "reza.arabsheibani@student.unimelb.edu.au",
+    "page": "reza",
+    "order": 3
+  },
+  {
+    "title": "Mr",
+    "name": "Zexian Huang",
+    "position": "PhD Student",
+    "email": "zexianh@student.unimelb.edu.au",
+    "page": "zexian",
+    "order": 3
+  }, 
+  {
     "title": "Mr",
     "name": "Rajesh Chittor Sundaram",
     "position": "PhD Student",
@@ -45,14 +69,6 @@
     "position": "PhD Student",
     "email": "deys@student.unimelb.edu.au",
     "page": "subhrasankha",
-    "order": 4
-  },
-  {
-    "title": "Ms",
-    "name": "Kimia Amouzandeh",
-    "position": "PhD Student",
-    "email": "kamouzandeh@student.unimelb.edu.au",
-    "page": "kimia",
     "order": 4
   },
   {
@@ -70,38 +86,6 @@
     "email": "ychoe@student.unimelb.edu.au",
     "page": "youjin",
     "order": 4
-  },
-  {
-    "title": "Ms",
-    "name": "Kiersten Jowett",
-    "position": "PhD Student",
-    "email": "kjowett@student.unimelb.edu.au",
-    "page": "kiersten",
-    "order": 3
-  },
-  {
-    "title": "Mr",
-    "name": "Zexian Huang",
-    "position": "PhD Student",
-    "email": "zexianh@student.unimelb.edu.au",
-    "page": "zexian",
-    "order": 3
-  }, 
-  {
-    "title": "Mr",
-    "name": "Reza Arabsheibani",
-    "position": "PhD Student",
-    "email": "reza.arabsheibani@student.unimelb.edu.au",
-    "page": "reza",
-    "order": 3
-  }, 
-  {
-    "title": "Dr",
-    "name": "Ivan Majic",
-    "position": "Alumni - PhD Student, RA",
-    "email": "",
-    "page": "ivan",
-    "order": 6
   }, 
   {
     "title": "-",
@@ -110,5 +94,21 @@
     "email": "-",
     "page": "-",
     "order": 5
+  },
+  {
+    "title": "Ms",
+    "name": "Kimia Amouzandeh",
+    "position": "Alumni - PhD Student",
+    "email": "",
+    "page": "kimia",
+    "order": 6
+  },
+  {
+    "title": "Dr",
+    "name": "Ivan Majic",
+    "position": "Alumni - PhD Student, RA",
+    "email": "",
+    "page": "ivan",
+    "order": 6
   }
 ]
